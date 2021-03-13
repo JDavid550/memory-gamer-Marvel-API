@@ -10,10 +10,9 @@ const getData = async ()=>{
         results = Object.values(data.data.results);
         let list = [];
         for (let i = 0; i < results.length; i++) {
-            if (results[i].thumbnail.path !== IMAGE_NOT_AVAILABLE ) {
+            if (results[i].thumbnail.path !== IMAGE_NOT_AVAILABLE && results[i].thumbnail.extension !== "gif") {
                 list.push(results[i])
             }
-            
         }
         data=list;
         return data
