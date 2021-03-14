@@ -7,10 +7,10 @@ import Play from './Play';
 const deploy = async ()=>{
     const characters = await getData();
     console.log(characters.length)
-    const main = document.getElementById('Main');
+    const cardCollection = document.getElementById('card-collection');
     let random_numbers = [];
     for (let i = 0; i < 16; i++) {
-        let counter = Math.floor(Math.random()*(characters.length-1+1)+1);
+        let counter = Math.floor(Math.random()*((characters.length-1)-1+1)+1);
         console.log(counter)
         let included = random_numbers.includes(counter)
         console.log(included)
@@ -18,7 +18,18 @@ const deploy = async ()=>{
             ? random_numbers.push(counter)
             : random_numbers.push(Math.ceil(counter/2))
 
-        main.innerHTML += `<img class=card src="${characters[random_numbers[i]].thumbnail.path}.${characters[random_numbers[i]].thumbnail.extension}"> ` 
+        cardCollection.innerHTML += ` 
+        
+        <div class="card-holder">
+            <div class="card">
+                <div class="card-front">
+                    
+                </div>
+                <div class="card-back">
+                    <img class=card src="${characters[random_numbers[i]].thumbnail.path}.${characters[random_numbers[i]].thumbnail.extension}">
+                </div>
+            </div>
+        </div>` 
     }
     
 }

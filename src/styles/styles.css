@@ -1,4 +1,81 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+
+.card, .card-holder{
+    width: 10rem;
+    height: 10rem;
+    
+}
+
 .card{
-    width: 100px;
-    height: 100px;
+    position: relative;
+    transform-style:preserve-3d;/***/
+    transition: transform 500ms linear;
+
+    border-radius: 10px;
+}
+
+.card-holder{
+    perspective: 300px;
+    margin: 0.5rem;
+}
+
+.card-front{
+    background-image: url("/assets/images/thumbnail.png");
+    background-position: center;
+    background-size: contain;
+}
+
+.card-front, .card-back{
+    width: 10rem;
+    height: 10rem;
+    backface-visibility: hidden; /** Esto hace que el elemento trasero configurado con position no se renderice**/
+    border-radius: 10px;
+}
+
+.card-front{
+    background-color: #202020;
+}
+
+.card-back{
+    position: absolute;
+    top: 0;
+    transform: rotateY(180deg);
+}
+
+.card-holder:hover .card{
+    transform: rotateY(180deg);
+}
+
+.card-collection{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50rem;
+
+}
+
+.try-Counter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 40rem;
+    margin-right: 6.5rem;
 }
