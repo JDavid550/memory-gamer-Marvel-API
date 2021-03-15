@@ -44,7 +44,7 @@ html{
     background-size: contain;
 }
 
-.card-front, .card-back{
+.card-front, .card-back, .card-image{
     width: 10rem;
     height: 10rem;
     backface-visibility: hidden; /** Esto hace que el elemento trasero configurado con position no se renderice**/
@@ -62,6 +62,12 @@ html{
 }
 
 .card-holder:hover .card{
+    cursor: pointer;
+
+    
+}
+/*Class created to be activated by JS*/
+.spin{
     transform: rotateY(180deg);
 }
 

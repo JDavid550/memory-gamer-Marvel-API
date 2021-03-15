@@ -29,13 +29,12 @@ const deploy = async ()=>{
                         
                     </div>
                     <div class="card-back">
-                        <img class=card src="${characters[shuffledList[i]].thumbnail.path}.${characters[shuffledList[i]].thumbnail.extension}">
+                        <img class=card-image src="${characters[shuffledList[i]].thumbnail.path}.${characters[shuffledList[i]].thumbnail.extension}">
                     </div>
                 </div>
             </div>` 
         
     }
-    
 }
 
-deploy();
+export default deploy;
