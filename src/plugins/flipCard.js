@@ -1,5 +1,8 @@
+///This funcionality is in charge to flip the cards everytime they're clicked. It includes the condition to prevent the matched cards flip again.
+
+
 let clicklist = []
-const turnAroundCard = () =>{
+const flipCard = () =>{
     setTimeout(()=>{
         let cards = document.querySelectorAll('.card')
         let cardsFront = document.querySelectorAll('.card-front')
@@ -28,4 +31,4 @@ const turnAroundCard = () =>{
     },2000)
 }
 
-export default turnAroundCard;
+export default flipCard;

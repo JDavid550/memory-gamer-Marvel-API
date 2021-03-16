@@ -7,7 +7,7 @@ let gameSession = new Play({
 })
 
 gameSession.fetch();
-gameSession.turnAroundCard();
+gameSession.flipCard();
 
 /////////////////////////
 
