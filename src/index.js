@@ -1,5 +1,5 @@
 import Play from './Play'
-
+import flipCard from './flipCard'
 
 
 let gameSession = new Play({
@@ -8,6 +8,7 @@ let gameSession = new Play({
 
 gameSession.fetch();
 gameSession.flipCard();
+
 
 /////////////////////////
 
