@@ -1,9 +1,9 @@
 import Play from './Play'
-import flipCard from './flipCard'
+import Counter from './plugins/counter'
 
 
 let gameSession = new Play({
-    plugins : []
+    plugins : [new Counter()]
 })
 
 gameSession.fetch();

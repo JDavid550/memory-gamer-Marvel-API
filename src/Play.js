@@ -6,15 +6,16 @@ import flipCard from './flipCard'
 ///I'm using the prototype method to instance the object Play
 
 function Play(config) {
+
     this.plugins = config.plugins || []
-    //this._initPlugins;
+    this._initPlugins();
 }
 
-/* Play.prototype._initPlugins = function(){
+Play.prototype._initPlugins = function(){
     this.plugins.forEach(plugin => {
         plugin.run(this)
-    });
-} */
+    })}
+
 
 Play.prototype.fetch =  async function () {
     await deploy();

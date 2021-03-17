@@ -16,16 +16,12 @@ const flipCard = ()=>{
                 clicklist.push(i)
                 console.log(clicklist)
                 showImage(cards,i)
-
                 if (cards[clicklist[clicklist.length-1]].children[1].children[0].attributes[1].nodeValue !== cards[clicklist[clicklist.length-2]].children[1].children[0].attributes[1].nodeValue) {
                     for (let j = 0; j < cards.length; j++) {
                         
                         cards[j].classList.remove('spin')
                     }
                     showImage(cards,i)
-                  /*   if (cards[i].className !== 'static') {
-                        showImage(cards,i)
-                    } */
                     
                 } else {
                     console.log('son iguales')
@@ -44,6 +40,7 @@ const flipCard = ()=>{
             })
         }
     },2000)
+    
 }
 
 export default flipCard;
