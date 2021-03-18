@@ -4,8 +4,45 @@
     box-sizing: border-box;
 }
 
+@font-face{
+    font-family: marvel;
+    src: url('/assets/MarvelRegular-Dj83.ttf');
+}
+
 html{
     font-size: 62.5%;
+}
+
+header{
+    width: 38rem;
+    height: 4rem;
+    background-color: #202020;
+    display: flex;
+    align-items: center;
+}
+
+header h1{
+    font-family: marvel;
+    color: aliceblue;
+    margin-left: 2rem;
+}
+
+body{
+    height: 100%;
+    width: 100vw;
+    background-image: url('fondo3.jpeg');
+    background-size:cover;
+    background-position:left;
+
+}
+
+
+a{
+    text-decoration: none;
+    color:#202020;
+    font-family: marvel;
+    background-color: yellow;
+    padding: 1rem 2rem;
 }
 
 .main{
@@ -15,13 +52,15 @@ html{
     align-items: center;
     height: 100vh;
     width: 100vw;
+    width: 100vw;
+    
 }
 
 
 
 .card, .card-holder{
-    width: 10rem;
-    height: 10rem;
+    width: 7rem;
+    height: 7rem;
     
 }
 
@@ -45,8 +84,8 @@ html{
 }
 
 .card-front, .card-back, .card-image{
-    width: 10rem;
-    height: 10rem;
+    width: 7rem;
+    height: 7rem;
     backface-visibility: hidden; /** Esto hace que el elemento trasero configurado con position no se renderice**/
     border-radius: 10px;
 }
@@ -80,7 +119,8 @@ html{
 .card-collection{
     display: flex;
     flex-wrap: wrap;
-    width: 50rem;
+    width: fit-content;
+    padding-left: 3rem;
 
 }
 
@@ -88,6 +128,30 @@ html{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
     width: 40rem;
-    margin-right: 6.5rem;
+    background-color: #202020;
+    margin: 3rem 0;
+    width: 30rem;
+    margin-left: 2rem;
+    padding: 3rem 0;
+    color: aliceblue;
+    font-family: marvel;
 }
+
+.movements-counter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.movements-counter h2{
+    margin-right: 0.3rem;
+}
+
+footer{
+    height: 4rem;
+    width: 38rem;
+    background-color: #202020;
+}
+
