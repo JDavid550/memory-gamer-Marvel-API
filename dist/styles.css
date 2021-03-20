@@ -19,6 +19,10 @@ header{
     background-color: #202020;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+header div{
+    margin-right: 3rem;
 }
 
 header h1{
@@ -30,7 +34,7 @@ header h1{
 body{
     height: 100%;
     width: 100vw;
-    background-image: url('fondo3.jpeg');
+    background-image: url('/assets/images/fondo3.jpeg');
     background-size:cover;
     background-position:left;
 
@@ -120,8 +124,6 @@ a{
     display: flex;
     flex-wrap: wrap;
     width: fit-content;
-    padding-left: 3rem;
-
 }
 
 .try-Counter{
@@ -133,7 +135,7 @@ a{
     background-color: #202020;
     margin: 3rem 0;
     width: 30rem;
-    margin-left: 2rem;
+    margin-left: 0;
     padding: 3rem 0;
     color: aliceblue;
     font-family: marvel;
@@ -155,3 +157,106 @@ footer{
     background-color: #202020;
 }
 
+@media (max-height:500px){
+    main{
+        height: fit-content;
+    }
+    body{
+        height: fit-content;
+    }
+    .card, .card-holder{
+        width: 3rem;
+        height: 3rem;
+        
+    }
+    .card-front, .card-back, .card-image{
+        width: 3rem;
+        height: 3rem;
+    }
+    .card-collection{
+        width:32rem;
+        padding-left: 0rem;
+    
+    }
+
+    .try-Counter{
+        margin-left: 0;
+    }
+}
+@media (max-width:368px){
+    header{
+        width: 100vw;
+
+    }
+    footer{
+        width: 100vw;
+    }
+
+    main{
+        height: fit-content;
+        margin-bottom: 5rem;
+    }
+
+    .card, .card-holder{
+        width: 4rem;
+        height: 4rem;
+        
+    }
+    .card-front, .card-back, .card-image{
+        width: 4rem;
+        height: 4rem;
+
+    }
+    .card-collection{
+        width: 20rem;
+    }
+
+    .try-Counter{
+
+        flex-direction: column;
+        height: 20rem;
+        justify-content: space-between;
+        align-items: center;
+        width: 10rem;
+        margin-top: 5rem;
+
+    }
+
+}
+
+@media (min-width:368px){
+    header{
+        width: 100vw;
+        
+    }
+    footer{
+        width: 100vw;
+    }
+
+    .card-collection{
+        width:32rem;
+        padding-left: 0rem;
+    
+    }
+
+    .try-Counter{
+        margin-left: 0;
+    }
+}
+
+@media(min-width:850px){
+
+    .card-collection{
+        width: 52rem;
+    }
+    .card, .card-holder{
+        width: 12rem;
+        height: 12rem;
+        
+    }
+    .card-front, .card-back, .card-image{
+        width: 12rem;
+        height: 12rem;
+
+    }
+}
