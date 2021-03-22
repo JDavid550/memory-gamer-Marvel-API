@@ -46,6 +46,7 @@ a {
   font-family: marvel;
   background-color: yellow;
   padding: 1rem 2rem;
+  box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.5);
 }
 
 .main {
@@ -169,6 +170,75 @@ footer {
   background-color: #202020;
 }
 
+/**Modal window styles**/
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 500ms ease;
+  /*visibility: hidden;*/
+}
+
+.modal-container {
+  width: 40rem;
+  height: 20rem;
+  background-color: #d42c31;
+  margin: auto;
+  box-shadow: 1px 7px 25px rgba(0px, 0px, 0px, 0.6);
+  border-radius: 5px;
+  transition: all 500ms ease;
+}
+
+.modal-container h2 {
+  font-family: marvel;
+  margin: 3rem 0 1.5rem 0;
+  font-size: 1.8rem;
+  color: aliceblue;
+}
+
+.modal-header {
+  width: inherit;
+}
+
+.modal-header h1 {
+  font-family: marvel;
+  color: aliceblue;
+}
+
+.modal-header label {
+  cursor: pointer;
+  color: aliceblue;
+  margin-right: 1.5rem;
+}
+
+#modal-closeButton {
+  display: none;
+}
+
+#modal-closeButton:checked ~ .modal {
+  visibility: hidden;
+  transition: all 500 ms ease;
+}
+.results {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+}
+.results h3 {
+  font-family: marvel;
+  font-size: 1.8rem;
+  color: aliceblue;
+}
+/***********/
+
 @media (max-height: 500px) {
   main {
     height: fit-content;
@@ -231,6 +301,12 @@ footer {
     align-items: center;
     width: 10rem;
     margin-top: 5rem;
+  }
+  .modal-container {
+    width: 25rem;
+  }
+  .results h3 {
+    font-size: 1.5rem;
   }
 }
 

@@ -1,4 +1,5 @@
 import showImage from './utils/showImage'
+import popUpwindow from './popUpwindow'
 
 ///This funcionality is in charge to flip the cards everytime they're clicked. It includes the condition to prevent the matched cards flip again.
 const flipCard = ()=>{
@@ -28,10 +29,18 @@ const flipCard = ()=>{
                     showImage(cards,i)
                     let lastTwoClickedCards = [];
                     lastTwoClickedCards.push(cards[clicklist[clicklist.length-1]],cards[clicklist[clicklist.length-2]])
-                    console.log(lastTwoClickedCards)
+                    //console.log(lastTwoClickedCards)
+                    
                     for (let k = 0; k < lastTwoClickedCards.length; k++) {
                         lastTwoClickedCards[k].setAttribute('class','static')
+                        let allStaticCards = [...document.querySelectorAll('.static')] //Añadida para verificar que todas las cartas esten giradas
+                        //console.log(allStaticCards)
+                        if (allStaticCards.length == cardsFront.length) {
+                            console.log('Pop Up')
+                            popUpwindow()
+                        }
                     }
+                    
                 } 
                 //console.log('Anterior es ' + clicklist[clicklist.length-2])
                 

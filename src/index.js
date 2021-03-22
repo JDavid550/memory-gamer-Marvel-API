@@ -1,10 +1,11 @@
 import Play from './Play'
 import Counter from './plugins/counter'
 import AutoPlay from './plugins/autoplay'
-import Chronometer from './plugins/chronometer'
+
 
 const audio = document.querySelector('audio')
 const cardCollection = document.getElementById('card-collection')
+const playAgainButton = document.querySelector('.play-again-button')
 
 let gameSession = new Play({
     timerState: 0,
@@ -19,7 +20,7 @@ gameSession.fetch();
 gameSession.flipCard();
 
 cardCollection.onclick = ()=> gameSession.toggleTimerStart()
-
+playAgainButton.onclick = ()=> location.reload()
 
 /////////////////////////
 
