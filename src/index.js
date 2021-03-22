@@ -18,7 +18,8 @@ let gameSession = new Play({
 gameSession.fetch();
 gameSession.flipCard();
 
-cardCollection.onclick = gameSession.toggleTimerStart()
+cardCollection.onclick = ()=> gameSession.toggleTimerStart()
+
 
 /////////////////////////
 

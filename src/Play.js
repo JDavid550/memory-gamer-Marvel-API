@@ -52,6 +52,7 @@ Play.prototype.toggleTimerStart = function(){
         console.log('connected')
     } else {
         console.log('not connected')
+        this.timerState = 1
     }
 }
 
