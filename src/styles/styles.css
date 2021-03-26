@@ -168,6 +168,10 @@ footer {
   height: 4rem;
   width: 38rem;
   background-color: #202020;
+  color: aliceblue;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 /**Modal window styles**/

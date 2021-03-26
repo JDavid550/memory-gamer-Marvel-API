@@ -3,7 +3,8 @@ import popUpwindow from './popUpwindow'
 
 ///This funcionality is in charge to flip the cards everytime they're clicked. It includes the condition to prevent the matched cards flip again.
 const flipCard = ()=>{
-    
+    let cardAudio = document.getElementById('card-audio')
+    let matchAudio = document.getElementById('match-audio')
     let cards = []
     let cardsFront = []
     let clicklist = []
@@ -17,6 +18,7 @@ const flipCard = ()=>{
                 clicklist.push(i)
                 console.log(clicklist)
                 showImage(cards,i)
+                cardAudio.play()
                 if (cards[clicklist[clicklist.length-1]].children[1].children[0].attributes[1].nodeValue !== cards[clicklist[clicklist.length-2]].children[1].children[0].attributes[1].nodeValue) {
                     for (let j = 0; j < cards.length; j++) {
                         
@@ -27,6 +29,7 @@ const flipCard = ()=>{
                 } else {
                     console.log('son iguales')
                     showImage(cards,i)
+                    matchAudio.play()
                     let lastTwoClickedCards = [];
                     lastTwoClickedCards.push(cards[clicklist[clicklist.length-1]],cards[clicklist[clicklist.length-2]])
                     //console.log(lastTwoClickedCards)
