@@ -1,0 +1,350 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: marvel;
+  src: url("/assets/MarvelRegular-Dj83.ttf");
+}
+
+html {
+  font-size: 62.5%;
+}
+
+header {
+  width: 38rem;
+  height: 4rem;
+  background-color: #202020;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header div {
+  margin-right: 3rem;
+  cursor: pointer;
+}
+
+header h1 {
+  font-family: marvel;
+  color: aliceblue;
+  margin-left: 2rem;
+}
+
+body {
+  height: 100%;
+  width: 100vw;
+  background-image: url("/assets/images/fondo3.jpeg");
+  background-size: cover;
+  background-position: left;
+}
+
+a {
+  text-decoration: none;
+  color: #202020;
+  font-family: marvel;
+  background-color: yellow;
+  padding: 1rem 2rem;
+  box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.5);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  width: 100vw;
+}
+
+.card,
+.card-holder {
+  width: 7rem;
+  height: 7rem;
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d; /***/
+  transition: transform 500ms linear;
+
+  border-radius: 10px;
+}
+
+.card-holder {
+  perspective: 300px;
+  margin: 0.5rem;
+}
+
+.card-front {
+  background-image: url("/assets/images/thumbnail.png");
+  background-position: center;
+  background-size: contain;
+}
+
+.card-front,
+.card-back,
+.card-image {
+  width: 7rem;
+  height: 7rem;
+  backface-visibility: hidden; /** Esto hace que el elemento trasero configurado con position no se renderice**/
+  border-radius: 10px;
+}
+
+.card-front {
+  background-color: #202020;
+}
+
+.card-back {
+  position: absolute;
+  top: 0;
+  transform: rotateY(180deg);
+}
+
+.card-holder:hover .card {
+  cursor: pointer;
+}
+/*Class created to be activated by JS*/
+.spin {
+  transform: rotateY(180deg);
+}
+.static {
+  transform: rotateY(180deg);
+  backface-visibility: visible;
+  transform-style: preserve-3d; /***/
+  transition: transform 500ms linear;
+}
+/****/
+.card-collection {
+  display: flex;
+  flex-wrap: wrap;
+  width: fit-content;
+}
+
+.try-Counter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 40rem;
+  background-color: #202020;
+  margin: 3rem 0;
+  width: 30rem;
+  margin-left: 0;
+  padding: 3rem 0;
+  color: aliceblue;
+  font-family: marvel;
+}
+
+.movements-counter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.movements-counter h2 {
+  margin-right: 0.3rem;
+}
+
+.time-counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+span {
+  font-family: marvel;
+  font-size: 1.6rem;
+}
+
+.time-counter-span {
+  display: flex;
+  flex-direction: row;
+}
+
+footer {
+  height: 4rem;
+  width: 38rem;
+  background-color: #202020;
+  color: aliceblue;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/**Modal window styles**/
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 500ms ease;
+  /*visibility: hidden;*/
+}
+
+.modal-container {
+  width: 40rem;
+  height: 20rem;
+  background-color: #d42c31;
+  margin: auto;
+  box-shadow: 1px 7px 25px rgba(0px, 0px, 0px, 0.6);
+  border-radius: 5px;
+  transition: all 500ms ease;
+}
+
+.modal-container h2 {
+  font-family: marvel;
+  margin: 3rem 0 1.5rem 0;
+  font-size: 1.8rem;
+  color: aliceblue;
+}
+
+.modal-header {
+  width: inherit;
+}
+
+.modal-header h1 {
+  font-family: marvel;
+  color: aliceblue;
+}
+
+.modal-header label {
+  cursor: pointer;
+  color: aliceblue;
+  margin-right: 1.5rem;
+}
+
+#modal-closeButton {
+  display: none;
+}
+
+#modal-closeButton:checked ~ .modal {
+  visibility: hidden;
+  transition: all 500 ms ease;
+}
+.results {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+}
+.results h3 {
+  font-family: marvel;
+  font-size: 1.8rem;
+  color: aliceblue;
+}
+/***********/
+
+@media (max-height: 500px) {
+  main {
+    height: fit-content;
+  }
+  body {
+    height: fit-content;
+  }
+  .card,
+  .card-holder {
+    width: 3rem;
+    height: 3rem;
+  }
+  .card-front,
+  .card-back,
+  .card-image {
+    width: 3rem;
+    height: 3rem;
+  }
+  .card-collection {
+    width: 32rem;
+    padding-left: 0rem;
+  }
+
+  .try-Counter {
+    margin-left: 0;
+  }
+}
+@media (max-width: 368px) {
+  header {
+    width: 100vw;
+  }
+  footer {
+    width: 100vw;
+  }
+
+  main {
+    height: fit-content;
+    margin-bottom: 5rem;
+  }
+
+  .card,
+  .card-holder {
+    width: 4rem;
+    height: 4rem;
+  }
+  .card-front,
+  .card-back,
+  .card-image {
+    width: 4rem;
+    height: 4rem;
+  }
+  .card-collection {
+    width: 20rem;
+  }
+
+  .try-Counter {
+    flex-direction: column;
+    height: 20rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 10rem;
+    margin-top: 5rem;
+  }
+  .modal-container {
+    width: 25rem;
+  }
+  .results h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 368px) {
+  header {
+    width: 100vw;
+  }
+  footer {
+    width: 100vw;
+  }
+
+  .card-collection {
+    width: 32rem;
+    padding-left: 0rem;
+  }
+
+  .try-Counter {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 850px) {
+  .card-collection {
+    width: 52rem;
+  }
+  .card,
+  .card-holder {
+    width: 12rem;
+    height: 12rem;
+  }
+  .card-front,
+  .card-back,
+  .card-image {
+    width: 12rem;
+    height: 12rem;
+  }
+}
