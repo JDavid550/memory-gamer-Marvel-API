@@ -5,7 +5,7 @@ cache:
 node_js:
   - "12"
 git:
-  depth: false
+  depth: 3
 script:
   - yarn build
 deploy:
