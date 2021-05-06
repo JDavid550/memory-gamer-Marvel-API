@@ -241,6 +241,42 @@ footer {
   font-size: 1.8rem;
   color: aliceblue;
 }
+.credits {
+  font-size: 8px;
+}
+
+.credits_Section {
+  width: 100vw;
+  height: 100vh;
+  background-color: #202020;
+  padding-top: 20rem;
+}
+
+.credits_Title {
+  color: white;
+}
+
+.credits_Container {
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+}
+
+.credits_Title {
+  margin-bottom: 3rem;
+  font-family: marvel;
+}
+
+.links_Continer {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
 /***********/
 
 @media (max-height: 500px) {
