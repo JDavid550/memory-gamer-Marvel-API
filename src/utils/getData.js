@@ -1,4 +1,7 @@
-const API = 'https://gateway.marvel.com/v1/public/characters?limit=100&offset=200&ts=1&apikey=9d1213bcbc5b3fd8b46eb731651494fa&hash=0625ad92b2f50b8ee1ca09827ba36f69'
+const API_KEY = process.env.API_KEY
+const HASH = process.env.HASH
+
+const API = `https://gateway.marvel.com/v1/public/characters?limit=100&offset=200&ts=1&apikey=${API_KEY}&hash=${HASH}`
 const IMAGE_NOT_AVAILABLE = "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available"
 
 ///This is the first functionality of the project
