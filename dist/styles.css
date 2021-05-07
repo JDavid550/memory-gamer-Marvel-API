@@ -89,6 +89,9 @@ a {
 .card-image {
   width: 7rem;
   height: 7rem;
+  -o-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden; /** Esto hace que el elemento trasero configurado con position no se renderice**/
   border-radius: 10px;
 }
@@ -100,6 +103,9 @@ a {
 .card-back {
   position: absolute;
   top: 0;
+  -o-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
@@ -108,6 +114,9 @@ a {
 }
 /*Class created to be activated by JS*/
 .spin {
+  -o-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 .static {
